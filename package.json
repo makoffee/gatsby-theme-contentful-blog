@@ -8,7 +8,7 @@
     "gatsby-plugin-image": "^3.5.0",
     "gatsby-plugin-sharp": "^5.5.0",
     "gatsby-source-contentful": "^8.5.0",
-    "gatsby-theme-abstract-blog": "1.0.0-3",
+    "gatsby-theme-abstract-blog": "https://github.com/makoffee/gatsby-theme-abstract-blog.git",
     "gatsby-transformer-remark": "^6.5.0",
     "gatsby-transformer-sharp": "^5.5.0",
     "sharp": "^0.30.5"
