@@ -33,31 +33,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
     },
   })
 
-  actions.createFieldExtension({
-    name: "urlSchema",
-    extend(options) {
-      const schemaRE = /^\/\//
-      const addURLSchema = (str) => {
-        if (schemaRE.test(str)) return `https:${str}`
-        return str
-      }
-      return {
-        resolve(source) {
-          return addURLSchema(source.file.url)
-        },
-      }
-    },
-  })
-
   actions.createTypes(/* GraphQL */ `
-    type ContentfulAsset implements Node & Image {
-      id: ID!
-      alt: String @proxy(from: "title")
-      gatsbyImageData: GatsbyImageData
-      url: String @urlSchema
-      file: JSON
-      title: String
-    }
     type ContentfulBlogAuthor implements Node & BlogAuthor {
       id: ID!
       name: String
