@@ -81,6 +81,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
       image: Image @link(from: "image___NODE")
       author: BlogAuthor @link(from: "author___NODE")
       category: String
+      content: [HomepageBlock] @link(from: "content___NODE")
     }
   `)
 }
