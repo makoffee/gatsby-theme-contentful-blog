@@ -52,6 +52,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
       body: String!
       date: Date! @dateformat
       excerpt: String! @contentfulExcerpt
+      excerptText: String
       contentfulExcerpt: contentfulBlogPostExcerptTextNode
         @link(from: "excerpt___NODE")
       image: Image @link(from: "image___NODE")
