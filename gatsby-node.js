@@ -49,9 +49,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
       slug: String!
       title: String!
       html: String! @contentfulRichText
-      body: {
-        raw
-      }
+      body: Node
       date: Date! @dateformat
       excerpt: String! @contentfulExcerpt
       excerptText: String
